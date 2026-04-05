@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T. Shan | Video</title>
+  <meta name="description" content="Music video by T. Shan.">
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <a href="https://tshan.vibe.to/flowers-spice" target="_blank" rel="noopener">Listen to &lsquo;Flowers &amp; Spice&rsquo; EP &rarr;</a>
+  </div>
+
+  <nav class="site-nav light" id="site-nav">
+    <div class="nav-logo">
+      <a href="/"><img src="/images/chinese-seal-logo.png" alt="T. Shan"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/press/">Press</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/booking/">Booking</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav">
+    <a href="/">Home</a>
+    <a href="/press/">Press</a>
+    <a href="/videos/">Videos</a>
+    <a href="/booking/">Booking</a>
+  </div>
+
+  <div class="video-page-section">
+    <div class="inner">
+      <h1 class="video-page-title" id="video-page-title">Loading&hellip;</h1>
+      <div class="video-page-embed" id="video-page-embed"></div>
+
+      <p class="more-videos-title">More Videos</p>
+      <div id="more-videos-grid"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-logo">
+      <img src="/images/chinese-seal-logo.png" alt="T. Shan">
+    </div>
+    <nav>
+      <ul class="footer-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/videos/">All Videos</a></li>
+        <li><a href="/press/">Press</a></li>
+        <li><a href="/booking/">Booking</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copyright">&copy; <span id="year"></span> T. Shan. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>const currentVideoSlug = 'cosplay-lv';</script>
+  <script src="/js/video-data.js"></script>
+  <script src="/js/video-page.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
