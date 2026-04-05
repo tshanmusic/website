@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   gridEl.innerHTML = others.map(function (v) {
     var thumbUrl = 'https://img.youtube.com/vi/' + v.youtubeId + '/mqdefault.jpg';
-    return '<a href="/videos/' + v.slug + '/" class="video-card">'
+    return '<a href="../' + v.slug + '/" class="video-card">'
       + '<div class="video-card-thumb">'
       + '<img src="' + thumbUrl + '" alt="' + v.title + '" loading="lazy">'
       + '<span class="play-badge">Watch</span>'
