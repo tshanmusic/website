@@ -7,54 +7,13 @@
   <meta name="description" content="Embroidered beanie. One size fits most.">
   <link rel="icon" href="../../images/favicon.ico">
   <link rel="stylesheet" href="../../css/style.css">
-  <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
   <style>
-    .product-detail {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .product-gallery-main img {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      display: block;
-    }
-
-    .product-gallery-thumbs {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .product-gallery-thumbs img {
-      width: calc(33.333% - 7px);
-      aspect-ratio: 1;
-      object-fit: cover;
-      cursor: pointer;
-      opacity: 0.6;
-      transition: opacity 0.2s;
-    }
-
-    .product-gallery-thumbs img:hover,
-    .product-gallery-thumbs img.active {
-      opacity: 1;
-    }
-
-    .product-info {
-      padding-top: 8px;
-    }
-
     .product-breadcrumb {
       font-size: 10px;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--gray);
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .product-breadcrumb a {
@@ -62,56 +21,9 @@
       text-decoration: underline;
     }
 
-    .product-title {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .product-price {
-      font-size: 13px;
-      letter-spacing: 0.1em;
-      color: var(--gray);
-      margin-bottom: 28px;
-    }
-
-    .product-description {
-      font-size: 12px;
-      line-height: 1.8;
-      letter-spacing: 0.08em;
-      color: #444;
-      margin-bottom: 36px;
-    }
-
-    .product-description p + p {
-      margin-top: 12px;
-    }
-
-    a.payhip-buy-button {
-      display: inline-block;
-      background: var(--black);
-      color: var(--white);
-      font-family: var(--font);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      padding: 14px 36px;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    a.payhip-buy-button:hover {
-      opacity: 0.75;
-    }
-
-    @media (max-width: 700px) {
-      .product-detail {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
+    .payhip-embed-page {
+      max-width: 860px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -147,30 +59,8 @@
 
   <div class="press-section">
     <div class="inner">
-      <div class="product-detail">
-
-        <div class="product-gallery">
-          <div class="product-gallery-main">
-            <img id="main-img" src="../../images/bdsm-beanie-1.jpg" alt="'BDSM' embroidered beanie">
-          </div>
-          <div class="product-gallery-thumbs">
-            <img src="../../images/bdsm-beanie-1.jpg" alt="" class="active" onclick="setMain(this)">
-            <img src="../../images/bdsm-beanie-2.jpg" alt="" onclick="setMain(this)">
-            <img src="../../images/bdsm-beanie-3.jpg" alt="" onclick="setMain(this)">
-          </div>
-        </div>
-
-        <div class="product-info">
-          <p class="product-breadcrumb"><a href="../">Merch</a> &rsaquo; &lsquo;BDSM&rsquo; Beanie</p>
-          <h2 class="product-title">&lsquo;BDSM&rsquo; Embroidered Beanie</h2>
-          <p class="product-price">$20.00</p>
-          <div class="product-description">
-            <p>Embroidered front graphic. One size fits most.</p>
-          </div>
-          <a href="https://payhip.com/b/8Jv2j" class="payhip-buy-button" data-theme="none" data-product="8Jv2j">Buy Now</a>
-        </div>
-
-      </div>
+      <p class="product-breadcrumb"><a href="../">Merch</a> &rsaquo; &lsquo;BDSM&rsquo; Beanie</p>
+      <div class="payhip-embed-page" data-key="8Jv2j">...</div>
     </div>
   </div>
 
@@ -191,13 +81,7 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script>
-    function setMain(thumb) {
-      document.getElementById('main-img').src = thumb.src;
-      document.querySelectorAll('.product-gallery-thumbs img').forEach(t => t.classList.remove('active'));
-      thumb.classList.add('active');
-    }
-  </script>
   <script src="../../js/main.js"></script>
+  <script type="text/javascript" src="https://payhip.com/embed-page.js?v=24u68985"></script>
 </body>
 </html>
