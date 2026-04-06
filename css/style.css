@@ -401,6 +401,61 @@ a {
 }
 
 /* ============================================
+   SECTION TRANSITIONS
+   ============================================ */
+
+.about-section,
+.music-section,
+.videos-section,
+.site-footer {
+  position: relative;
+}
+
+/* hero (black) → about (white) */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, #000, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* about (white) → music (light gray) — subtle */
+.music-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, #fff, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* music (light gray) → videos (black) */
+.videos-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, var(--light-gray), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* videos (black) → footer (white) */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, #000, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
    ABOUT SECTION
    ============================================ */
 
@@ -719,7 +774,6 @@ a {
 
 .site-footer {
   background: var(--white);
-  border-top: 1px solid #e8e8e8;
   padding: 48px 60px;
   display: flex;
   flex-direction: column;
