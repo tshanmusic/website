@@ -54,6 +54,7 @@ a {
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 60px;
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
 }
 
 /* ============================================
@@ -113,7 +114,7 @@ a {
 }
 
 .nav-logo img {
-  height: 44px;
+  height: 52px;
   width: auto;
 }
 
@@ -262,30 +263,32 @@ a {
   text-shadow: 0px 0px 4px #fff;
 }
 
-.hero-actions {
+.hero-cta-row {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 14px;
+  justify-content: center;
+  gap: 16px;
   margin-bottom: 48px;
+  flex-wrap: wrap;
 }
 
-.hero-btn {
+.hero-cta-btn {
   display: inline-block;
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--white);
-  border-bottom: 1px solid rgba(255,255,255,0.6);
-  padding-bottom: 2px;
-  transition: border-color 0.2s, opacity 0.2s;
   text-shadow: 0px 0px 4px #fff;
+  border: 1px solid rgba(255,255,255,0.55);
+  padding: 11px 22px;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
 }
 
-.hero-btn:hover {
-  border-color: var(--white);
-  opacity: 0.8;
+.hero-cta-btn:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.9);
 }
 
 .hero-subtitle {
@@ -314,7 +317,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
@@ -322,9 +325,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   transition: opacity 0.2s, transform 0.2s;
+  flex-shrink: 0;
 }
 
 .social-links a:hover {
@@ -333,9 +337,10 @@ a {
 }
 
 .social-links svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   fill: currentColor;
+  display: block;
 }
 
 /* White social (hero) */
@@ -421,11 +426,12 @@ a {
 }
 
 .about-text p {
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 15px;
-  line-height: 1.85;
-  color: #222;
+  line-height: 1.9;
+  color: #333;
   margin-bottom: 20px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .about-text p:last-child {
@@ -489,6 +495,7 @@ a {
   font-size: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
 }
 
 .album-year {
@@ -744,6 +751,18 @@ a {
 
 .footer-social a:hover {
   opacity: 0.5;
+}
+
+.footer-booking {
+  font-size: 12px;
+  color: var(--gray);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.footer-booking a {
+  color: var(--gray);
+  text-decoration: underline;
 }
 
 .footer-copyright {
