@@ -51,10 +51,10 @@ a {
   font-family: var(--font);
   font-style: italic;
   font-weight: bold;
-  font-size: 26px;
-  letter-spacing: 0.5em;
+  font-size: 29px;
+  letter-spacing: 0.6em;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 25px;
   margin-bottom: 60px;
   text-shadow: 0px 0px 4px #fff;
 }
