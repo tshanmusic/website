@@ -454,7 +454,7 @@ a {
   height: 40px;
   background: linear-gradient(to bottom, rgba(255,255,255,0.7), transparent);
   pointer-events: none;
-  z-index: 3;
+  z-index: 1;
 }
 
 /* ============================================
@@ -669,21 +669,9 @@ a {
   color: var(--white);
 }
 
-.videos-section::after {
-  content: '';
-  position: absolute;
-  inset: -15px;
-  background: url('../images/img_3191_bg.jpg') center center / cover no-repeat;
-  filter: blur(8px);
-  opacity: 0.45;
-  z-index: 0;
-}
-
 .videos-section .inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
 }
 
 .videos-section .section-title {
