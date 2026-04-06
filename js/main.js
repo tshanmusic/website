@@ -46,6 +46,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // ─── Hero background video (lazy-loaded after page) ───
+  var heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    window.addEventListener('load', function () {
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/fvqE0ulfqa4'
+        + '?autoplay=1&mute=1&loop=1&playlist=fvqE0ulfqa4'
+        + '&controls=0&rel=0&playsinline=1&modestbranding=1&showinfo=0';
+      iframe.allow = 'autoplay; encrypted-media';
+      heroVideo.appendChild(iframe);
+      setTimeout(function () {
+        heroVideo.classList.add('loaded');
+      }, 1200);
+    });
+  }
+
   // ─── Scroll indicator hide on scroll ───
   var scrollInd = document.querySelector('.scroll-indicator');
   if (scrollInd) {
