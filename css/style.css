@@ -436,23 +436,23 @@ a {
   position: relative;
 }
 
-/* about → music: dark bleeds up from music into about */
+/* about → music */
 .about-section::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.55));
   pointer-events: none;
   z-index: 1;
 }
 
-/* music top and bottom fades: matches about gradient at top, fades to black at bottom for videos */
+/* music: matches about fade at top, fades to black at bottom for videos */
 .music-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
   pointer-events: none;
   z-index: 3;
 }
