@@ -435,6 +435,17 @@ a {
   position: relative;
 }
 
+/* hero → about */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* about → music */
 .about-section::after {
   content: '';
@@ -442,6 +453,17 @@ a {
   bottom: 0; left: 0; right: 0;
   height: 50px;
   background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.55));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* videos → footer */
+.videos-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--white));
   pointer-events: none;
   z-index: 1;
 }
@@ -1292,7 +1314,7 @@ a {
 @media (max-width: 768px) {
   :root {
     --section-pad: 70px 28px;
-    --nav-height: 56px;
+    --nav-height: 76px;
   }
 
   .site-nav {
@@ -1315,6 +1337,13 @@ a {
   .about-image {
     position: static;
     max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .video-grid .video-embed:nth-child(4),
+  .video-grid .video-embed:nth-child(8),
+  .video-grid .video-embed:nth-child(9) {
+    display: none;
   }
 
   .featured-album {
@@ -1327,7 +1356,7 @@ a {
   }
 
   .video-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .video-card-grid {
