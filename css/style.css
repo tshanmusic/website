@@ -440,7 +440,7 @@ a {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 60px;
+  height: 35px;
   background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
   pointer-events: none;
   z-index: 1;
@@ -462,7 +462,7 @@ a {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 60px;
+  height: 35px;
   background: linear-gradient(to bottom, transparent, var(--white));
   pointer-events: none;
   z-index: 1;
@@ -473,7 +473,7 @@ a {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 88%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 8%, rgba(0,0,0,0) 88%, rgba(0,0,0,1) 100%);
   pointer-events: none;
   z-index: 3;
 }
@@ -523,7 +523,7 @@ a {
   line-height: 1.65;
   color: #222;
   margin-bottom: 24px;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
   text-align: center;
 }
 
@@ -625,6 +625,8 @@ a {
   border: 2px solid var(--white);
   padding: 10px 20px;
   transition: background 0.2s, color 0.2s;
+  align-self: flex-start;
+  text-align: center;
 }
 
 .album-btn:hover {
@@ -1334,6 +1336,10 @@ a {
     gap: 36px;
   }
 
+  .about-text p {
+    font-size: 13px;
+  }
+
   .about-image {
     position: static;
     max-width: 240px;
@@ -1350,6 +1356,7 @@ a {
     grid-template-columns: 140px 1fr;
     gap: 20px;
   }
+
 
   .discography-grid {
     grid-template-columns: repeat(2, 1fr);
